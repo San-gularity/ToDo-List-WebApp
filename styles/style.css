@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    }
+    body {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+    /* display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 0px; */
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+    text-decoration: none;
+    color: inherit;
+    }
+    /* SIDEBAR STYLE START--------------------------------------------------------- */
+    .wrapper {
+    left: 0px;
+    width: 100vh;
+    position: fixed;
+    transition: all 0.5s ease;
+    }
+    /* Include the padding and border in an element's total width and height */
+    .wrapper .sidebar {
+    background: #fff;
+    height: 50vh;
+    padding-left: 0px;
+    padding-right: 10%;
+    }
+    .wrapper .sidebar .profile {
+    margin-bottom: 30px;
+    text-align: center;
+    padding-left: 10%;
+    margin-top: 9px;
+    }
+    /* DO SIDEBAR OPEN AND CLOSE STYLE................................................. */
+    .closebtn {
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    font-size: 40px;
+    margin-left: 11px;
+    margin-top: 7px;
+    cursor: pointer;
+    color: #000000;
+    }
+    .openbtn {
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    padding-bottom: 10px;
+    border: none;
+    text-decoration: solid;
+    }
+    .closebtnMobile {
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    font-size: 40px;
+    margin-left: 11px;
+    margin-top: 7px;
+    cursor: pointer;
+    color: #000000;
+    }
+    .openbtnMobile {
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    padding-bottom: 10px;
+    border: none;
+    text-decoration: solid;
+    }
+    /* DO SIDEBAR STYLE................................................. */
+    .wrapper .sidebar .profile #headDo {
+    color: #37019b;
+    }
+    .wrapper .sidebar #sbDo a {
+    /* background-color: #e98074; */
+    padding: 13px 30px;
+    display: block;
+    border-bottom: 1px solid #ececec;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+    position: relative;
+    }
+    .wrapper .sidebar #sbDo a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: #37019b;
+    display: none;
+    }
+    .wrapper .sidebar #sbDo a:hover {
+    color: #37019b;
+    background: linear-gradient(to right, #fff, #cbbde6);
+    }
+    .wrapper .sidebar #sbDo a:hover:before {
+    display: block;
+    }
+    /* DECIDE SIDEBAR STYLE................................................. */
+    .wrapper .sidebar .profile #headDecide {
+    color: #023ed6;
+    }
+    .wrapper .sidebar #sbDecide a {
+    /* background-color: #e98074; */
+    padding: 13px 30px;
+    display: block;
+    border-bottom: 1px solid #ececec;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+    position: relative;
+    }
+    .wrapper .sidebar #sbDecide a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: #023ed6;
+    display: none;
+    }
+    .wrapper .sidebar #sbDecide a:hover {
+    color: #023ed6;
+    background: linear-gradient(to right, #fff, #bac7e7);
+    }
+    .wrapper .sidebar #sbDecide a:hover:before {
+    display: block;
+    }
+    /* DELEGATE SIDEBAR STYLE................................................. */
+    .wrapper .sidebar .profile #headDelegate {
+    color: #0a5377;
+    }
+    .wrapper .sidebar #sbDelegate a {
+    /* background-color: #e98074; */
+    padding: 13px 30px;
+    display: block;
+    border-bottom: 1px solid #ececec;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+    position: relative;
+    }
+    .wrapper .sidebar #sbDelegate a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: #0a5377;
+    display: none;
+    }
+    .wrapper .sidebar #sbDelegate a:hover {
+    color: #336c88;
+    background: linear-gradient(to right, #fff, #acd4e9);
+    }
+    .wrapper .sidebar #sbDelegate a:hover:before {
+    display: block;
+    }
+    /* DELETE SIDEBAR STYLE................................................. */
+    .wrapper .sidebar .profile #headDelete {
+    color: #028cc2;
+    }
+    .wrapper .sidebar #sbDelete a {
+    /* background-color: #e98074; */
+    padding: 13px 30px;
+    display: block;
+    border-bottom: 1px solid #ececec;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+    position: relative;
+    }
+    .wrapper .sidebar #sbDelete a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: #028cc2;
+    display: none;
+    }
+    .wrapper .sidebar #sbDelete a:hover {
+    color: #028cc2;
+    background: linear-gradient(to right, #fff, #acd7e9);
+    }
+    .wrapper .sidebar #sbDelete a:hover:before {
+    display: block;
+    }
+    /* SIDEBAR STYLE END---------------------------------------------------------- */
+    /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+    /* LIST STYLE START---------------------------------------------------------- */
+    .main {
+    display: block;
+    right: 0px;
+    left: 0px;
+    bottom: 0vh;
+    background-color: #f1f1f0;
+    /* width: 80vw; */
+    top: 0vh;
+    position: absolute;
+    height: 100vh;
+    /* transition: width none; */
+    transition: all 0.5s ease;
+    }
+    /* STYLE DO ELEMENTS................................................ */
+    .ulDo .item {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    .ulDo :nth-child(odd) {
+    background: #f9f9f9;
+    }
+    /* Darker background-color on hover */
+    .ulDo :hover {
+    background: linear-gradient(to right, #ddd, #cbbde6);
+    }
+    /* When clicked on, add a background color and strike out text */
+    .ulDo .checked {
+    background: #888;
+    text-decoration: line-through;
+    }
+    /* Add a "checked" mark when clicked on */
+    .ulDo .checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    }
+    /* STYLE DECIDE ELEMENTS...............................................*/
+    .ulDecide .item {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    .ulDecide :nth-child(odd) {
+    background: #f9f9f9;
+    }
+    /* Darker background-color on hover */
+    .ulDecide :hover {
+    background: linear-gradient(to right, #ddd, #bac7e7);
+    }
+    /* When clicked on, add a background color and strike out text */
+    .ulDecide .checked {
+    background: #888;
+    text-decoration: line-through;
+    }
+    /* Add a "checked" mark when clicked on */
+    .ulDecide .checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    }
+    /* STYLE DELEGATE ELEMENTS........................................... */
+    .ulDelegate .item {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    .ulDelegate :nth-child(odd) {
+    background: #f9f9f9;
+    }
+    /* Darker background-color on hover */
+    .ulDelegate :hover {
+    background: linear-gradient(to right, #ddd, #acd4e9);
+    }
+    /* When clicked on, add a background color and strike out text */
+    .ulDelegate .checked {
+    background: #888;
+    text-decoration: line-through;
+    }
+    /* Add a "checked" mark when clicked on */
+    .ulDelegate .checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    }
+    /* STYLE DELETE ELEMENTS............................................... */
+    .ulDelete .item {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    .ulDelete :nth-child(odd) {
+    background: #f9f9f9;
+    }
+    /* Darker background-color on hover */
+    .ulDelete :hover {
+    background: linear-gradient(to right, #ddd, #acd7e9);
+    }
+    /* When clicked on, add a background color and strike out text */
+    .ulDelete .checked {
+    background: #888;
+    text-decoration: line-through;
+    }
+    /* Add a "checked" mark when clicked on */
+    .ulDelete .checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    }
+    /* STYLE CLOSE BUTTON */
+    .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    background: #9c9c9c !important;
+    }
+    .close:hover {
+    background: #535353 !important;
+    color: white;
+    }
+    /*LIST STYLE END------------------------------------------------------------ */
+    /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+    /* HEADER STYLE START--------------------------------------------------------- */
+    /* Style the header */
+    .header1 {
+    background-color: #8860d0;
+    background: linear-gradient(135deg, #612cc2, #8d63e0);
+    /* padding: 30px 40px; */
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    }
+    /* Clear floats after the header */
+    .header1:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .header2 {
+    background-color: #5680e9;
+    background: linear-gradient(135deg, #0e40bd, #3f63be);
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    }
+    .header2:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .header3 {
+    background-color: #3ea8ddd5;
+    background: linear-gradient(135deg, #0a6ea0, #3f94be);
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    }
+    .header3:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .header4 {
+    background-color: #84ceeb;
+    background: linear-gradient(135deg, #2facdd, #84ceeb);
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    }
+    .header4:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    /* Style the input */
+    input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    }
+    /* Style the "Add" button */
+    .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: rgb(41, 39, 39);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    }
+    .addBtn:hover {
+    background-color: #bbb;
+    }
+    /* HEADER STYLE END--------------------------------------------------------- */
+    /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+    /* SCALING THE WEBSITE------------------------------------------------------- */
+    @media screen and (min-width: 1200px) {
+    .closebtn {
+    display: none;
+    }
+    .openbtn {
+    display: none;
+    }
+    .closebtnMobile {
+    display: none;
+    }
+    .openbtnMobile {
+    display: none;
+    }
+    .header1,
+    .header2,
+    .header3,
+    .header4 {
+    padding-top: 52px;
+    }
+    .profile {
+    padding-top: 54px;
+    }
+    .main {
+    left: 280px !important;
+    }
+    .wrapper {
+    width: 280px !important;
+    }
+    }
+    @media screen and (min-width: 550px) and (max-width: 1200px) {
+    .closebtnMobile {
+    display: none;
+    }
+    .openbtnMobile {
+    display: none;
+    }
+    .main {
+    left: 280px;
+    }
+    .wrapper {
+    width: 280px;
+    }
+    }
+    @media screen and (max-width: 550px) {
+    .closebtn {
+    display: none;
+    }
+    .openbtn {
+    display: none;
+    }
+    }

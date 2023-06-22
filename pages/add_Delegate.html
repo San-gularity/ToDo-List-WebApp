@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delegate</title>
+<script src="../scripts/index.js" defer></script>
+<link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body onload="checkData()">
+<div class="wrapper" id="myWrapper">
+<div class="sidebar">
+<div class="closebtn" onclick="closeSidebar()">×</div>
+<div class="closebtnMobile" onclick="closeSidebarMobile()">×</div>
+<div class="profile">
+<h3 id="headDelegate">TO-DO LIST</h3>
+</div>
+<div id="sbDelegate">
+<a href="../index.html"> Home </a>
+<a href="../pages/add_do.html"> Do </a>
+<a href="../pages/add_decide.html"> Decide </a>
+<a href="../pages/add_delete.html"> Delete </a>
+</div>
+</div>
+</div>
+<div class="main" id="myMain">
+<div class="header3">
+<h1
+onclick="openSidebar()"
+class="openbtn"
+style="text-align: left; padding-left: 11px"
+id="hamburger"
+>
+☰
+</h1>
+<h1
+onclick="openSidebarMobile()"
+class="openbtnMobile"
+style="text-align: left; padding-left: 11px"
+id="hamburgerMobile"
+>
+☰
+</h1>
+<h1 style="margin: 0px; text-align: left; padding-left: 40px">
+DELEGATE
+</h1>
+<h2 style="margin: 5px; text-align: left; padding-left: 35px">
+Tasks that are not important but urgent
+</h2>
+<form
+onsubmit="newElement(); return false;"
+style="
+margin: 0px;
+text-align: left;
+padding-left: 40px;
+padding-right: 40px;
+"
+>
+<input
+type="text"
+id="myInput"
+placeholder="Add your tasks here"
+maxlength="80"
+/>
+<input type="submit" value="Add" class="addBtn" />
+</form>
+</div>
+<ul id="itemList" class="ulDelegate"></ul>
+</div>
+</body>
+</html>

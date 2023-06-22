@@ -1,0 +1,230 @@
+h1 {
+    color: white;
+    font-weight: lighter;
+    }
+    b {
+    font-weight: lighter;
+    }
+    body {
+    background-color: #000;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+    text-decoration: none;
+    color: white;
+    }
+    .do {
+    position: absolute;
+    right: 50vw;
+    bottom: 50vh;
+    background-color: #8860d0;
+    width: 25vw;
+    height: 25vh;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 0px;
+    font-size: 4vw;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .decide {
+    position: absolute;
+    left: 50vw;
+    bottom: 50vh;
+    background-color: #5680e9;
+    width: 25vw;
+    height: 25vh;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 0px;
+    font-size: 4vw;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .delegate {
+    position: absolute;
+    right: 50vw;
+    top: 50vh;
+    background-color: #3ea8ddd5;
+    width: 25vw;
+    height: 25vh;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 0px;
+    font-size: 4vw;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .delete {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    background-color: #84ceeb;
+    width: 25vw;
+    height: 25vh;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 0px;
+    font-size: 4vw;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .do:hover {
+    background-color: #8860d0;
+    background: linear-gradient(135deg, #7c54c5, #37019b);
+    cursor: pointer;
+    }
+    .decide:hover {
+    background-color: #5680e9;
+    background: linear-gradient(135deg, #4e6bb6, #023ed6);
+    cursor: pointer;
+    }
+    .delegate:hover {
+    background-color: #5ab9ea;
+    background: linear-gradient(135deg, #3bb1ec, #0a5377);
+    cursor: pointer;
+    }
+    .delete:hover {
+    background-color: #84ceeb;
+    background: linear-gradient(135deg, #84ceeb, #028cc2);
+    cursor: pointer;
+    }
+    .inText {
+    font-size: 0.8em;
+    }
+    @media screen and (max-width: 900px) {
+    .urg {
+    display: none;
+    position: absolute;
+    color: white;
+    left: 32vw;
+    top: 17vh;
+    font-size: 2vw;
+    }
+    .ntUrg {
+    display: none;
+    position: absolute;
+    color: white;
+    right: 32vw;
+    top: 17vh;
+    font-size: 2vw;
+    }
+    .imp {
+    display: none;
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 17vw;
+    bottom: 62vh;
+    font-size: 1.8vw;
+    }
+    .ntImp {
+    display: none;
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 15vw;
+    top: 62vh;
+    font-size: 1.8vw;
+    }
+    .do,
+    .decide,
+    .delegate,
+    .delete {
+    display: block;
+    }
+    }
+    @media screen and (max-height: 510px) {
+    .urg {
+    display: none;
+    position: absolute;
+    color: white;
+    left: 32vw;
+    top: 17vh;
+    font-size: 2vw;
+    }
+    .ntUrg {
+    display: none;
+    position: absolute;
+    color: white;
+    right: 32vw;
+    top: 17vh;
+    font-size: 2vw;
+    }
+    .imp {
+    display: none;
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 17vw;
+    bottom: 62vh;
+    font-size: 1.8vw;
+    }
+    .ntImp {
+    display: none;
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 15vw;
+    top: 62vh;
+    font-size: 1.8vw;
+    }
+    }
+    @media screen and (min-width: 900px) {
+    .urg {
+    position: absolute;
+    color: white;
+    left: 32vw;
+    top: 17vh;
+    font-size: 19px;
+    }
+    .ntUrg {
+    position: absolute;
+    color: white;
+    right: 32vw;
+    top: 17vh;
+    font-size: 19px;
+    }
+    .imp {
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 17vw;
+    bottom: 62vh;
+    font-size: 17px;
+    }
+    .inText {
+    display: none;
+    font-size: 0.5em;
+    }
+    }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .ntImp {
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 15vw;
+    top: 62vh;
+    font-size: 17px;
+    }
+    }
+    @media screen and (min-width: 1200px) {
+    .ntImp {
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    left: 15.5vw;
+    top: 62vh;
+    font-size: 17px;
+    }
+    }
